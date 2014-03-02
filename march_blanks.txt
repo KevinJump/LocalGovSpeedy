@@ -1,0 +1,28 @@
+swansea,http://www.swansea.gov.uk
+winchester,http://www.winchester.gov.uk
+barnet,http://www.barnet.gov.uk
+sutton,http://www.sutton.gov.uk
+leicester,http://www.leicester.gov.uk
+cityoflondon,http://www.cityoflondon.gov.uk
+w-isles,http://www.cne-siar.gov.uk
+dungannon,http://www.dungannon.gov.uk
+east-ayrshire,http://www.east-ayrshire.gov.uk
+essexcc,http://www.essex.gov.uk
+gloucester,http://www.gloucester.gov.uk
+harrogate,http://www.harrogate.gov.uk
+magherafelt, http://www.magherafelt.gov.uk
+antrim,http://www.antrim.gov.uk
+# welsh splash sites
+caerphilly,http://www.caerphilly.gov.uk/default.aspx
+rhondda-cynon-taf,http://www.rctcbc.gov.uk/en/home.aspx
+carmarthenshire,http://www.carmarthenshire.gov.uk/English/Pages/home.aspx
+gwynedd,http://www.gwynedd.gov.uk/index.asp?LangID=1&Language=1&p=1&c=1
+cardiff,http://www.cardiff.gov.uk/content.asp?parent_directory_id=2865
+pembrokeshire,http://www.pembrokeshire.gov.uk/content.asp
+blaenau-gwent,http://www.blaenau-gwent.gov.uk/index.asp
+conwy,http://www.conwy.gov.uk/index.asp?Language=1
+flintshire,http://www.flintshire.gov.uk/home/
+torfaen,http://www.torfaen.gov.uk/en/Home.aspx
+merthyr,http://www.merthyr.gov.uk/English/Pages/default.aspx
+
+
