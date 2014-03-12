@@ -11,6 +11,9 @@ import urllib2
 import json
 import time  
 
+import base64
+
+
 pageSpeedApikey = ''
 pageSpeedUrl = ''
  
@@ -30,7 +33,7 @@ def GetPageSpeedJson(url, site_type):
         
         # build the pagespeed url
         api_key = pageSpeedApiKey          
-        url_args = { 'url': url, 'strategy': site_type, 'key' : api_key }        
+        url_args = { 'url': url, 'strategy': site_type, 'key' : api_key, 'screenshot' : 'true'}        
         encoded_args = urllib.urlencode(url_args)
         ps_url = 'https://www.googleapis.com/pagespeedonline/v1/runPagespeed?{0}'.format(encoded_args)
         
@@ -62,6 +65,25 @@ def saveJson(council_name, response, site_type):
     js.write(response)
     js.close()
     
+def saveScreenshot(council_name, site_type, ps_json):
+    
+    try:
+        file_name = './results/screenshots/' + council_name + '_' + site_type + ".jpg"
+        jpg = open(file_name, 'wb')
+    
+        data = json.loads(ps_json)
+        screenshot_section = data['screenshot']
+        jpg_data = screenshot_section['data'].replace('_', '/').replace('-', '+')
+
+
+        # The google pagespeed service is returning an invalid base64. 
+        # To correct it replace all '_' with '/' and all '-' with '+'.
+        jpg.write(base64.b64decode(jpg_data))
+        jpg.close()
+    except:
+        return
+    
+    
     
 def printCouncilScores(council_name, council_site, ps_json):
     try:
@@ -75,9 +97,11 @@ def printCouncilScores(council_name, council_site, ps_json):
         ps_cssb = psGetBytes(ps_json, 'cssResponseBytes')
         ps_imgb = psGetBytes(ps_json, 'imageResponseBytes')
         ps_jsb = psGetBytes(ps_json, 'javascriptResponseBytes')
-        ps_othb = psGetBytes(ps_json, 'otherResponseBytes')  
+        ps_othb = psGetBytes(ps_json, 'otherResponseBytes')
         
-        print ',{0},{1},{2},{3},{4},'.format(ps_htmlb, ps_cssb, ps_imgb, ps_jsb, ps_othb) ,
+        total_bytes = int(ps_htmlb) + int(ps_cssb) + int(ps_imgb) + int(ps_jsb) + int(ps_othb)   
+        
+        print ',{0},{1},{2},{3},{4},{5},'.format(ps_htmlb, ps_cssb, ps_imgb, ps_jsb, ps_othb, total_bytes) ,
 
     except:
         print 'error,0,0,0,0,0,'
@@ -90,6 +114,7 @@ def GetAndProcessResults(council_name, council_site, site_type):
         if council_result.__len__() > 10 :
             saveJson(council_name, council_result, site_type)
             printCouncilScores(council_name, council_site, council_result)
+            saveScreenshot(council_name, site_type, council_result)
     except:
         return 
 
@@ -97,6 +122,7 @@ def GetAndProcessResults(council_name, council_site, site_type):
 # Main code ---
 #
 #
+#council_file = 'test.txt'
 council_file = 'CouncilSites.txt'
 
 f = open(council_file, 'r')
