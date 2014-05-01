@@ -28,7 +28,7 @@ birmingham,http://www.birmingham.gov.uk
 blabyccmportal,http://www.blaby.gov.uk/ccm/portal/
 blackburn,http://www.blackburn.gov.uk
 blackpool,http://www.blackpool.gov.uk
-blaenau-gwent,http://www.blaenau-gwent.gov.uk
+blaenau-gwent,http://www.blaenau-gwent.gov.uk/index.asp
 bolsover,http://www.bolsover.gov.uk
 bolton,http://www.bolton.gov.uk
 boston,http://www.boston.gov.uk
@@ -54,13 +54,13 @@ cambridge,http://www.cambridge.gov.uk
 cambridgeshire,http://www.cambridgeshire.gov.uk
 cannockchasedc,http://www.cannockchasedc.gov.uk
 canterbury,http://www.canterbury.gov.uk
-cardiff,http://www.cardiff.gov.uk
+cardiff,http://www.cardiff.gov.uk/content.asp?parent_directory_id=2865
 carlisle,http://www.carlisle.gov.uk
-carmarthenshire,http://www.carmarthenshire.gov.uk
+carmarthenshire,http://www.carmarthenshire.gov.uk/English/Pages/home.aspx
 carrickfergus.org,http://www.carrickfergus.org
 castlepoint,http://www.castlepoint.gov.uk
 castlereagh,http://www.castlereagh.gov.uk
-ceredigion,http://www.ceredigion.gov.uk
+ceredigion,http://www.ceredigion.gov.uk/English/Resident/Pages/default.aspx
 charnwood,http://www.charnwood.gov.uk
 chelmsford,http://www.chelmsford.gov.uk
 cheltenham,http://www.cheltenham.gov.uk
@@ -82,7 +82,7 @@ clacks,http://www.clacks.gov.uk
 colchester,http://www.colchester.gov.uk
 colerainebc,http://www.colerainebc.gov.uk
 w-isles,http://www.cne-siar.gov.uk/
-conwy,http://www.conwy.gov.uk
+conwy,http://www.conwy.gov.uk/index.asp?Language=1
 cookstown,http://www.cookstown.gov.uk
 copelandbc,http://www.copelandbc.gov.uk
 corby,http://www.corby.gov.uk
@@ -141,7 +141,7 @@ fareham,http://www.fareham.gov.uk
 fenland,http://www.fenland.gov.uk
 fermanagh,http://www.fermanagh.gov.uk
 fife,http://www.fife.gov.uk
-flintshire,http://www.flintshire.gov.uk
+flintshire,http://www.flintshire.gov.uk/home/
 forest-heath,http://www.forest-heath.gov.uk
 fdean,http://www.fdean.gov.uk
 fylde,http://www.fylde.gov.uk
@@ -236,7 +236,7 @@ mansfield,http://www.mansfield.gov.uk
 medway,http://www.medway.gov.uk
 melton,http://www.melton.gov.uk
 mendip,http://www.mendip.gov.uk
-merthyr,http://www.merthyr.gov.uk
+merthyr,http://www.merthyr.gov.uk/English/Pages/default.aspx
 middevon,http://www.middevon.gov.uk
 middlesbrough,http://www.middlesbrough.gov.uk
 midlothian,http://www.midlothian.gov.uk
@@ -252,7 +252,7 @@ newark-sherwooddc,http://www.newark-sherwooddc.gov.uk
 newcastle-staffs,http://www.newcastle-staffs.gov.uk
 newcastle,http://www.newcastle.gov.uk
 newforest,http://www.newforest.gov.uk
-newport,http://www.newport.gov.uk
+newport,http://www.newport.gov.uk/_dc/index.cfm
 # newryandmourne,http://www.newryandmourne.gov.uk (404)
 newtownabbey,http://www.newtownabbey.gov.uk
 norfolk,http://www.norfolk.gov.uk
@@ -285,14 +285,14 @@ omagh,http://www.omagh.gov.uk
 orkney,http://www.orkney.gov.uk
 oxford,http://www.oxford.gov.uk
 oxfordshire,http://www.oxfordshire.gov.uk
-pembrokeshire,http://www.pembrokeshire.gov.uk
+pembrokeshire,http://www.pembrokeshire.gov.uk/content.asp
 pendle,http://www.pendle.gov.uk
 pkc,http://www.pkc.gov.uk
 peterborough,http://www.peterborough.gov.uk
 plymouth,http://www.plymouth.gov.uk
 boroughofpoole.com,http://www.boroughofpoole.com
 portsmouth,http://www.portsmouth.gov.uk
-powys,http://www.powys.gov.uk
+powys,http://www.powys.gov.uk/index.php?id=1&L=0
 preston,http://www.preston.gov.uk
 purbeck,http://www.purbeck.gov.uk
 reading,http://www.reading.gov.uk
@@ -300,7 +300,7 @@ redcar-cleveland,http://www.redcar-cleveland.gov.uk
 redditchbc,http://www.redditchbc.gov.uk
 reigate-banstead,http://www.reigate-banstead.gov.uk
 renfrewshire,http://www.renfrewshire.gov.uk
-rhondda-cynon-taf,http://www.rhondda-cynon-taf.gov.uk
+rhondda-cynon-taf,http://www.rctcbc.gov.uk/en/home.aspx
 ribblevalley,http://www.ribblevalley.gov.uk
 richmondshire,http://www.richmondshire.gov.uk
 rochdale,http://www.rochdale.gov.uk
@@ -387,7 +387,7 @@ threerivers,http://www.threerivers.gov.uk
 thurrock,http://www.thurrock.gov.uk
 tmbc,http://www.tmbc.gov.uk
 torbay,http://www.torbay.gov.uk
-torfaen,http://www.torfaen.gov.uk
+torfaen,http://www.torfaen.gov.uk/en/Home.aspx
 torridge,http://www.torridge.gov.uk
 trafford,http://www.trafford.gov.uk
 tunbridgewells,http://www.tunbridgewells.gov.uk
@@ -426,7 +426,7 @@ wolverhampton,http://www.wolverhampton.gov.uk
 worcester,http://www.worcester.gov.uk
 worcestershire,http://www.worcestershire.gov.uk
 worthing,http://www.worthing.gov.uk
-wrexham,http://www.wrexham.gov.uk
+wrexham,http://www.wrexham.gov.uk/english/index.cfm
 wychavon,http://www.wychavon.gov.uk
 wycombe,http://www.wycombe.gov.uk
 wyrebc,http://www.wyrebc.gov.uk
