@@ -16,6 +16,8 @@ local.properties
 .settings/
 .loadpath
 speed_config.json
+results/
+*.csv
 
 # External tool builders
 .externalToolBuilders/

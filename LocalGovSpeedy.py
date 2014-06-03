@@ -27,21 +27,22 @@ with open('speed_config.json') as config_file:
 
 # go to google and get the pagespeed info for a site
 #
-def GetPageSpeedJson(url, site_type):
-    
+def GetPageSpeedJson(url, site_type):  
+
     try:
-        
-        # build the pagespeed url
-        api_key = pageSpeedApiKey          
-        url_args = { 'url': url, 'strategy': site_type, 'key' : api_key, 'screenshot' : 'true'}        
-        encoded_args = urllib.urlencode(url_args)
-        ps_url = 'https://www.googleapis.com/pagespeedonline/v1/runPagespeed?{0}'.format(encoded_args)
-        
-        response = urllib2.urlopen(ps_url, timeout = 15)
-        return response.read()
+	
+		# build the pagespeed url
+		api_key = pageSpeedApiKey          
+		url_args = { 'url': url, 'strategy': site_type, 'key' : api_key, 'screenshot' : 'true'}        
+		encoded_args = urllib.urlencode(url_args)
+		ps_url = 'https://www.googleapis.com/pagespeedonline/v1/runPagespeed?{0}'.format(encoded_args)
+		
+		response = urllib2.urlopen(ps_url, timeout = 30)
+		return response.read()
+	
     except:
-        print '{0},error getting page insights'.format(url)
-        
+	    print "Unexpected error:", sys.exc_info()[0]
+
 #
 # read the bytes value from the json - if it's not set
 # return 0
@@ -122,8 +123,8 @@ def GetAndProcessResults(council_name, council_site, site_type):
 # Main code ---
 #
 #
-#council_file = 'test.txt'
-council_file = 'CouncilSites.txt'
+#council_file = 'CouncilSites.txt'
+council_file = 'betasites_june.txt'
 
 f = open(council_file, 'r')
 all_lines = f.read().splitlines()
