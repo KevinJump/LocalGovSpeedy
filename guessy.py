@@ -45,6 +45,7 @@ def FindTheString(url, html, search):
 
 # file
 websites_file = 'CouncilDomains.txt'
+guess = "new"
 
 f = open(websites_file, 'r')
 all_lines = f.read().splitlines()
@@ -64,9 +65,9 @@ for website in all_lines:
 			website_name = website_info[0]
 			website_url = website_info[1]
 
-			html = GetContent( 'http://new{0}'.format(website_url))
+			html = GetContent( 'http://{0}{1}'.format(guess, website_url))
 			if html.__len__() > 10 :
-				print 'http://new{0}'.format(website_url) 
+				print 'http://{0}{1}'.format(guess, website_url) 
 				
 			#print '[{0}]'.format(current) ,
  

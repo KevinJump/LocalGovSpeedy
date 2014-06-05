@@ -1,5 +1,5 @@
 #
-# Site looksy 
+# Site trendy - looks for the cool words
 # -----------
 #
 # author		: Kevin Jump ( @kevinjump)
@@ -12,6 +12,8 @@ import urllib2
 import urllib 
 import time
 
+foundcount = 0 
+
 
 #
 # GetContent : Gets the HTML from a URL
@@ -23,7 +25,7 @@ def GetContent(url):
 		return response.read()
 		
 	except:
-		print 'error getting site',
+		print url, ' error getting site',
 		return ''
 
 
@@ -31,8 +33,10 @@ def FindTheString(url, html, search):
 
 	substring = html.lower().find(search.lower())
 	if ( substring > 0 ) :
-		print '' 
-		print '{0} found {1}'.format(url, search),  
+		print ' found [{0}]'.format(search),  
+		return 1 
+	
+	return 0 
 		
 #
 # Main Application
@@ -45,7 +49,10 @@ def FindTheString(url, html, search):
 
 # file
 websites_file = 'councilsites.txt'
-searchString = "top task"
+
+trends = ['top task', 'straight to', 'residents', 'pay it', 'report it', 'find my nearest', 'popular tasks','highlights','faq','frequently asked','Popular topics','Quick links']
+trendcounts = range(len(trends)) 
+websites = 0
 
 f = open(websites_file, 'r')
 all_lines = f.read().splitlines()
@@ -67,8 +74,27 @@ for website in all_lines:
 
 			html = GetContent(website_url) 
 			if html.__len__() > 10 :
-				FindTheString(website_url, html, searchString)
+			
+				print '[{0}].{1}'.format(current, website_url),
+				websites = websites + 1 
+			
+				for i in range(len(trends)):
 				
-			print '[{0}]'.format(current) ,
+					searchstring = trends[i] 
+					
+					if FindTheString(website_url, html, searchstring) == 1:
+						trendcounts[i] = trendcounts[i] + 1
+					
+				
+			print ''
  
 f.close() 
+
+print "."
+
+print 'Got Content from {0} websites'.format(websites) 
+print '--------------------------------'
+
+for i in range(len(trends)):
+	print '{0}   : {1}'.format(trends[i], trendcounts[i])
+	
